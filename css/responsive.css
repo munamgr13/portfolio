@@ -1,0 +1,229 @@
+/* ========== Comprehensive Responsive Design ========== */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+    .hero-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero-left {
+        order: 1;
+    }
+
+    .hero-right {
+        order: 2;
+        align-items: center;
+    }
+
+    .hero-social {
+        justify-content: center;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+
+    .about-image {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .profile-frame {
+        width: 280px !important;
+        height: 280px !important;
+    }
+
+    .hero-greeting {
+        font-size: 2rem;
+    }
+
+    .hero-name {
+        font-size: 2.5rem;
+    }
+
+    .hero-title {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--color-white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow-lg);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Sections */
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* About */
+    .about-image {
+        max-width: 300px;
+    }
+
+    /* Timeline */
+    .timeline {
+        padding-left: 30px;
+    }
+
+    .timeline-marker {
+        left: -38px;
+    }
+
+    /* Research grid */
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Skills */
+    .skills-categories {
+        grid-template-columns: 1fr;
+    }
+
+    /* Certifications */
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Awards */
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Leadership */
+    .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+
+    .contact-section {
+        padding-bottom: 2rem;
+    }
+
+    .contact-info {
+        gap: 1rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .profile-frame {
+        width: 220px !important;
+        height: 220px !important;
+    }
+
+    .hero-greeting {
+        font-size: 1.5rem;
+    }
+
+    .hero-name {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .about-image {
+        max-width: 250px;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-marker {
+        left: -28px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .coursework-list {
+        grid-template-columns: 1fr;
+    }
+
+    .research-title {
+        font-size: 1.1rem;
+    }
+
+    .cert-card,
+    .award-card,
+    .leadership-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+    .hero-greeting {
+        font-size: 1.3rem;
+    }
+
+    .hero-name {
+        font-size: 1.75rem;
+    }
+
+    .profile-frame {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
