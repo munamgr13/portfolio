@@ -40,22 +40,6 @@
 
 .hero-title {
     font-size: 1.3rem;
-    color: var(--color-secondary);
-    font-weight: 500;
-    margin: 0;
-    font-family: var(--font-body);
-}
-
-.hero-social {
-    display: flex;
-    gap: 1rem;
-    margin-top: 0.5rem;
-}
-
-.social-icon {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
     background: var(--color-white);
     display: flex;
     align-items: center;
