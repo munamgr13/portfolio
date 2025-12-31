@@ -419,11 +419,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Form submission handling
-    contactForm.addEventListener('submit', function (e) {
+    contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
 
         const submitBtn = this.querySelector('.btn-submit');
         const originalText = submitBtn.textContent;
+
+        // Get form data
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
 
         // Animate button
         gsap.to(submitBtn, {
@@ -433,23 +441,81 @@ document.addEventListener('DOMContentLoaded', function () {
             repeat: 1
         });
 
+        // Disable button and show sending toast
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
+        showToast('Sending your message... This may take up to a minute.', 'info');
 
-        // Simulate form submission (replace with actual submission logic)
-        setTimeout(() => {
-            submitBtn.textContent = 'Message Sent! ✓';
-            submitBtn.style.background = '#4a7c3b';
+        try {
+            const response = await fetch('https://mailer-vb0z.onrender.com/contact/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
 
-            // Reset form
-            setTimeout(() => {
+            if (response.ok) {
+                showToast('Message sent successfully! ✓', 'success');
                 contactForm.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.background = '';
-            }, 2000);
-        }, 1500);
+                submitBtn.textContent = 'Message Sent! ✓';
+                submitBtn.style.background = '#4a7c3b';
+
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                }, 3000);
+            } else {
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            console.error('Error sending message:', error);
+            showToast('Failed to send message. Please try again.', 'error');
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
     });
+
+    // Toast notification function
+    function showToast(message, type = 'info') {
+        // Remove any existing toasts
+        const existingToast = document.querySelector('.toast-notification');
+        if (existingToast) {
+            existingToast.remove();
+        }
+
+        // Create toast element
+        const toast = document.createElement('div');
+        toast.className = `toast-notification toast-${type}`;
+        toast.innerHTML = `
+            <span class="toast-message">${message}</span>
+            <button class="toast-close" onclick="this.parentElement.remove()">×</button>
+        `;
+
+        // Add to body
+        document.body.appendChild(toast);
+
+        // Animate in
+        gsap.fromTo(toast,
+            { x: 100, opacity: 0 },
+            { x: 0, opacity: 1, duration: 0.4, ease: 'power2.out' }
+        );
+
+        // Auto remove after 5 seconds (except for info type which stays longer)
+        const autoRemoveTime = type === 'info' ? 60000 : 5000;
+        setTimeout(() => {
+            if (toast.parentElement) {
+                gsap.to(toast, {
+                    x: 100,
+                    opacity: 0,
+                    duration: 0.3,
+                    onComplete: () => toast.remove()
+                });
+            }
+        }, autoRemoveTime);
+    }
 
     // ========== Section Header Animations ==========
     const sectionHeaders = document.querySelectorAll('.section-header');

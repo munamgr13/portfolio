@@ -1041,6 +1041,33 @@ ul {
     line-height: 1.7;
 }
 
+.leadership-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: var(--transition-medium);
+    background: var(--color-white);
+}
+
+.leadership-image-wrapper:hover {
+    box-shadow: var(--shadow-lg);
+    transform: scale(1.02);
+}
+
+.leadership-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition-medium);
+}
+
+.leadership-image-wrapper:hover .leadership-image {
+    transform: scale(1.02);
+}
+
 /* ========== Languages Section ========== */
 .languages-section {
     background: var(--color-bg-cream);
@@ -1249,6 +1276,57 @@ ul {
     opacity: 0.9;
 }
 
+/* ========== Toast Notifications ========== */
+.toast-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10000;
+    box-shadow: var(--shadow-lg);
+    max-width: 400px;
+    font-weight: 500;
+}
+
+.toast-info {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.toast-success {
+    background: linear-gradient(135deg, #27ae60, #1e8449);
+    color: white;
+}
+
+.toast-error {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+.toast-message {
+    flex: 1;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    line-height: 1;
+    padding: 0;
+}
+
+.toast-close:hover {
+    opacity: 1;
+}
+
 /* ========== Responsive Design ========== */
 
 /* Tablet */
@@ -1355,6 +1433,13 @@ ul {
     .conference-meta {
         flex-direction: column;
         gap: var(--spacing-xs);
+    }
+
+    .toast-notification {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        max-width: none;
     }
 }
 
