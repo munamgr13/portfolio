@@ -2,779 +2,908 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio of an Agriculture Science Graduate specializing in sustainable farming, agricultural research, and climate-resilient crop management">
-    <meta name="keywords"
-        content="Agriculture, B.Sc Agriculture, Agronomy, Sustainable Farming, Agricultural Research, Plant Pathology, Soil Science">
-    <meta name="author" content="Muna Thapa Portfolio">
-    <title>Muna Thapa Portfolio | B.Sc. Agriculture Graduate</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/hero-horizontal.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muna Thapa | Agriculture Graduate & Researcher</title>
+  <meta name="description"
+    content="Portfolio of Muna Thapa - B.Sc. Agriculture Graduate, Researcher passionate about sustainable farming and climate-resilient agriculture.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-brand"></div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+  <!-- Toast Container -->
+  <div id="toast-container"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="nav-container">
+      <div class="nav-content">
+        <button onclick="scrollToSection('home')" class="logo">
+          <div class="logo-circle">
+            <span>MT</span>
+          </div>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+          <button onclick="scrollToSection('home')" class="nav-link active" data-section="home">Home</button>
+          <button onclick="scrollToSection('about')" class="nav-link" data-section="about">About</button>
+          <button onclick="scrollToSection('education')" class="nav-link" data-section="education">Education</button>
+          <button onclick="scrollToSection('research')" class="nav-link" data-section="research">Research</button>
+          <button onclick="scrollToSection('experience')" class="nav-link" data-section="experience">Experience</button>
+          <button onclick="scrollToSection('skills')" class="nav-link" data-section="skills">Skills</button>
+          <button onclick="scrollToSection('contact')" class="nav-link" data-section="contact">Contact</button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <svg class="menu-icon" id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg class="close-icon hidden" id="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav hidden" id="mobile-nav">
+      <div class="mobile-nav-links">
+        <button onclick="scrollToSection('home')" class="mobile-nav-link active" data-section="home">Home</button>
+        <button onclick="scrollToSection('about')" class="mobile-nav-link" data-section="about">About</button>
+        <button onclick="scrollToSection('education')" class="mobile-nav-link" data-section="education">Education</button>
+        <button onclick="scrollToSection('research')" class="mobile-nav-link" data-section="research">Research</button>
+        <button onclick="scrollToSection('experience')" class="mobile-nav-link" data-section="experience">Experience</button>
+        <button onclick="scrollToSection('skills')" class="mobile-nav-link" data-section="skills">Skills</button>
+        <button onclick="scrollToSection('contact')" class="mobile-nav-link" data-section="contact">Contact</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-grid">
+        <!-- Profile Image -->
+        <div class="hero-image-wrapper">
+          <div class="hero-image-glow"></div>
+          <div class="hero-image">
+            <img src="assets/images/landing_page_image.jpg" alt="Muna Thapa Profile">
+          </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <div class="hero-text">
+            <span class="badge badge-outline">B.Sc. Agriculture Graduate</span>
+            <h1>Hi There!<br>I'm Muna Thapa!</h1>
+            <p class="hero-subtitle">Agriculture Graduate | Researcher</p>
+          </div>
+
+          <p class="hero-description">
+            Passionate about sustainable farming, climate-resilient agriculture, and advancing agricultural research to improve food security and rural development.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="assets/cv/CV_Muna_Thapa.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+              Download CV
+            </a>
+            <button onclick="scrollToSection('contact')" class="btn btn-outline">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              Contact Info
             </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a passionate <strong>Bachelor of Science in Agriculture</strong> graduate from Far Western University, School of Agriculture, with a strong foundation in agricultural sciences and a research-driven approach to sustainable farming.
+          </p>
+          <p>
+            My academic journey has been focused on understanding the intricate relationships between agriculture, environment, and sustainability. With specialized knowledge in <strong>Agronomy, Plant Pathology, Entomology, Horticulture, Soil Science, and Agricultural Economics</strong>, I bring a comprehensive perspective to modern agricultural challenges.
+          </p>
+          <p>
+            I am deeply committed to advancing <strong>climate-resilient agriculture</strong> and sustainable farming practices. Through hands-on research, field work, and data-driven analysis, I strive to contribute meaningful solutions to food security, environmental conservation, and rural development.
+          </p>
+          <p>
+            My research interests focus on crop productivity optimization, climate change adaptation strategies, and the application of modern technologies in agriculture. I believe in the power of evidence-based practices to transform agricultural systems and improve farmers' livelihoods.
+          </p>
+        </div>
+
+        <div class="about-image-wrapper">
+          <div class="about-image-bg"></div>
+          <img src="assets/images/aboutme.jpg" alt="Agriculture Research" class="about-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section section-gradient">
+    <div class="container">
+      <div class="section-header">
+        <h2>Education</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="card card-education">
+        <div class="card-header card-header-primary">
+          <div class="card-header-content">
+            <div class="icon-box icon-box-light">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <div class="card-header-text">
+              <span class="badge badge-light">2019 - 2022</span>
+              <h3>Bachelor of Science in Agriculture</h3>
+              <p class="card-subtitle">Far Western University, School of Agriculture</p>
+              <p class="card-grade">Final Grade: 3.38 / 4.0</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="coursework">
+            <h4>Key Coursework:</h4>
+            <div class="coursework-grid">
+              <div class="coursework-item"><span class="dot"></span>Agronomy and Crop Production</div>
+              <div class="coursework-item"><span class="dot"></span>Plant Pathology and Entomology</div>
+              <div class="coursework-item"><span class="dot"></span>Soil Science and Fertility Management</div>
+              <div class="coursework-item"><span class="dot"></span>Horticulture and Landscaping</div>
+              <div class="coursework-item"><span class="dot"></span>Agricultural Economics and Statistics</div>
+              <div class="coursework-item"><span class="dot"></span>Climate Change and Agriculture</div>
+              <div class="coursework-item"><span class="dot"></span>Research Methodology and Experimental Design</div>
+            </div>
+          </div>
+
+          <hr class="separator">
+
+          <div class="thesis">
+            <h4>Thesis Research:</h4>
+            <div class="thesis-card">
+              <p class="thesis-title">
+                <strong>Growth, Productivity and Profitability of Different Cultivars of Potato (Solanum tuberosum L.) with and without Straw-Mulch in Dadeldhura, Nepal</strong>
+              </p>
+              <p class="thesis-description">
+                Comprehensive field research examining the impact of straw mulching on potato cultivar performance, focusing on growth parameters, yield optimization, and economic viability in the Dadeldhura region.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research" class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <h2>Research & Publications</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="research-grid">
+        <div class="card card-hover">
+          <div class="card-body">
+            <div class="research-header">
+              <svg class="research-icon emerald" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+              <span class="badge badge-emerald">Research Article</span>
+            </div>
+            <h3 class="research-title">Growth, Productivity and Profitability of Different Cultivars of Potato (Solanum tuberosum L.) with and without Straw-Mulch in Dadeldhura, Nepal</h3>
+            <div class="research-meta">
+              <p><strong>Authors:</strong> Muna Thapa, Lal Prasad Amgain, Manisha Chaudhary</p>
+              <p><strong>Journal:</strong> Nepalese Horticulture</p>
+            </div>
+            <p class="research-description">
+              This study evaluates the impact of straw mulching on growth parameters, yield, and economic returns of four potato cultivars in far-western Nepal.
+            </p>
+            <a href="https://doi.org/10.3126/nh.v19i1.86415" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-full">
+              View Publication
+              <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="card card-hover">
+          <div class="card-body">
+            <div class="research-header">
+              <svg class="research-icon amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+              <span class="badge badge-amber">Abstract Paper</span>
+            </div>
+            <h3 class="research-title">Evaluation Of Major Agro-Meteorological Indices of Rapeseed Grown With Climate Change Adaptation Measures Under Western Terai Agroecology of Nepal</h3>
+            <div class="research-meta">
+              <p><strong>Authors:</strong> Muna Thapa, Pramod Pokhrel, Lal Prasad Amgain</p>
+              <p><strong>Journal:</strong> World Congress on "Climate Change and Its Effects (CCIE-2025)" â€“ Souvenir / Proceedings</p>
+            </div>
+            <p class="research-description">
+              Comprehensive field study examining climate-resilient agricultural practices and their adoption by smallholder farmers in the Dadeldhura district.
+            </p>
+            <a href="https://agetds.com/ijaas/wp-content/uploads/sites/2/2025/09/Final-Souvenir-proceeding-cum-absatrct-book-CCIE-2025.pdf#page=377" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-full">
+              View Publication
+              <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section section-gradient">
+    <div class="container">
+      <div class="section-header">
+        <h2>Work Experience</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="experience-list">
+        <!-- Experience 1 -->
+        <div class="card card-experience">
+          <div class="card-header card-header-experience">
+            <div class="card-header-content">
+              <div class="icon-box icon-box-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+              </div>
+              <div class="card-header-text">
+                <span class="badge badge-emerald">Oct 2025 - Present</span>
+                <h3>Research Assistant</h3>
+                <p class="card-subtitle">Nepal Development Research Institute (NDRI), Lalitpur, Nepal</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <ul class="responsibility-list">
+              <li><span class="dot"></span>Conducted comprehensive literature reviews on Nepal's large cardamom sector, analyzing production systems, market demand, export patterns, and price mechanisms to generate evidence-based insights for project reporting</li>
+              <li><span class="dot"></span>Provided research and administrative support across the Livelihoods and Food Security thematic area, contributing to ongoing projects, team meetings, and collaborative activities under the supervision of project and thematic leads</li>
+              <li><span class="dot"></span>Supported in overall research, assisted in field surveys, data cleaning, transcribing and translation of qualitative data and documentation in Safe Migration and Integration of Food Safety and Nutrition in Nepal</li>
             </ul>
+          </div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-bg-pattern"></div>
-        <div class="container">
-            <div class="hero-content-wrapper">
-                <!-- Left Side: Profile Photo -->
-                <div class="hero-left">
-                    <div class="profile-container">
-                        <div class="profile-frame">
-                            <img src="assets/images/landing_page_image.jpg" alt="Muna Thapa Profile"
-                                class="profile-image">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Side: Content -->
-                <div class="hero-right">
-                    <img src="https://readme-typing-svg.herokuapp.com/?font=sans-serif&size=45&center=true&vCenter=true&width=500&color=000000&height=70&duration=4000&lines=Hi+There!;+I'm+Muna+Thapa!"
-                        alt="I'm Muna Thapa" />
-
-                    <p class="hero-title">Agriculture Graduate | Researcher</p>
-
-                    <div class="hero-buttons">
-                        <a href="assets/cv/CV_Muna_Thapa.pdf" class="btn btn-primary" target="_blank"
-                            rel="noopener noreferrer">Download CV</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Info</a>
-                    </div>
-                    <!-- 
-                    <div class="hero-social">
-                        <a href="https://www.linkedin.com/in/muna-thapa-6a7420247/" target="_blank"
-                            rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg>
-                        </a>
-                        <a href="https://www.researchgate.net/scientific-contributions/Muna-Thapa-2333686901"
-                            target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="ResearchGate">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.121 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.897a10.93 10.93 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876-.29.212-.738.35-1.227.35-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1-.147-.762 17.366 17.366 0 0 1-.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.401 0 0 1 .014-.938 15.821 15.821 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.047.08-.12.04-.215a4.859 4.859 0 0 0-1.016-1.425c-.44-.37-.95-.555-1.588-.555M8.217 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 1.403v6.534c0 .915-.43 1.259-1.174 1.403l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.488-1.174-1.403v-3.273c.343.057.688.086 1.031.086 2.92 0 4.639-1.488 4.639-3.932 0-2.387-1.547-3.907-4.639-3.907zm-.515 7.487c-.373 0-.573-.028-.944-.085v-6.59c.229-.028.515-.057.888-.057 1.519 0 2.435.745 2.435 2.888 0 2.258-.859 3.844-2.379 3.844z" />
-                            </svg>
-                        </a>
-                    </div> -->
-                </div>
+        <!-- Experience 2 -->
+        <div class="card card-experience">
+          <div class="card-header card-header-experience">
+            <div class="card-header-content">
+              <div class="icon-box icon-box-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+              </div>
+              <div class="card-header-text">
+                <span class="badge badge-emerald">July 2024 - Sept 2025</span>
+                <h3>Farm Manager</h3>
+                <p class="card-subtitle">Dynamic Mountain Organic Agro Company Pvt. Ltd</p>
+              </div>
             </div>
+          </div>
+          <div class="card-body">
+            <ul class="responsibility-list">
+              <li><span class="dot"></span>Developing sustainable business strategies and expanding market linkages for herbs, vegetables, and spices, with attention to environmentally responsible practices.</li>
+              <li><span class="dot"></span>Providing technical guidance and consultancy on crop production, plant health management, and the import-export value chain of agricultural products.</li>
+              <li><span class="dot"></span>Supervising and coordinating daily operational activities, ensuring effective integration of sustainable cultivation practices.</li>
+              <li><span class="dot"></span>Coordinating with local farmers, cooperatives, and stakeholders to implement plant health interventions and environmentally friendly cropping systems.</li>
+              <li><span class="dot"></span>Monitoring and supervising cultivation practices to enhance plant health, productivity, and quality, while applying scientific and evidence-based approaches.</li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <div class="section-divider"></div>
+        <!-- Experience 3 -->
+        <div class="card card-experience">
+          <div class="card-header card-header-experience">
+            <div class="card-header-content">
+              <div class="icon-box icon-box-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+              </div>
+              <div class="card-header-text">
+                <span class="badge badge-emerald">Jan 2023 - July 2023</span>
+                <h3>Agriculture Intern</h3>
+                <p class="card-subtitle">Prime Minister Agriculture Modernization Project, PIU-DADELDHURA</p>
+              </div>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-intro">I am a passionate <strong>Bachelor of Science in Agriculture </strong>
-                        graduate from Far Western University, School of Agriculture, with a
-                        strong foundation in agricultural sciences and a research-driven approach to sustainable
-                        farming.</p>
-
-                    <p>My academic journey has been focused on understanding the intricate relationships between
-                        agriculture, environment, and sustainability. With specialized knowledge in <strong>Agronomy,
-                            Plant Pathology, Entomology, Horticulture, Soil Science, and Agricultural
-                            Economics</strong>, I bring a comprehensive perspective to modern agricultural challenges.
-                    </p>
-
-                    <p>I am deeply committed to advancing <strong>climate-resilient agriculture</strong> and sustainable
-                        farming practices. Through hands-on research, field work, and data-driven analysis, I strive to
-                        contribute meaningful solutions to food security, environmental conservation, and rural
-                        development.</p>
-
-                    <p>My research interests focus on crop productivity optimization, climate change adaptation
-                        strategies, and the application of modern technologies in agriculture. I believe in the power of
-                        evidence-based practices to transform agricultural systems and improve farmers' livelihoods.</p>
-                </div>
-                <div class="about-illustration">
-                    <img src="assets/images/aboutme.jpg" alt="Agriculture Research" class="about-image">
-                </div>
-            </div>
+          </div>
+          <div class="card-body">
+            <ul class="responsibility-list">
+              <li><span class="dot"></span>Participated in the identification and management of Citrus Greening Disease (HLB) in Sweet Orange Orchards</li>
+              <li><span class="dot"></span>Sample preparation for PCR test for Citrus Greening Disease</li>
+              <li><span class="dot"></span>Training on the Application of Plastic Mulching for Potato and Soybean Cultivation Provided to farmers</li>
+              <li><span class="dot"></span>Investigation of Potato Powdery Scab Management in Infected Soil Using Diverse Biological and Chemical Treatments</li>
+              <li><span class="dot"></span>Varietal evaluation, morphological characterization and preference analysis of potato genotype</li>
+              <li><span class="dot"></span>Investigation on effect of Seed Tuber Size on Growth and Yield of Potato (Solanum Tuberosum L.) Variety Desiree</li>
+              <li><span class="dot"></span>Investigation on effect of different organic manure in growth and yield of potato (Desiree)</li>
+              <li><span class="dot"></span>Attended Training on Integrated Pest Management Practices for Potato</li>
+            </ul>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Education</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2019 - 2022</div>
-                        <h3 class="timeline-title">Bachelor of Science in Agriculture</h3>
-                        <h4 class="timeline-institution">Far Western University, School of Agriculture</h4>
-                        <div class="timeline-grade">Final Grade: 3.38 / 4.0</div>
-                        <div class="timeline-details">
-                            <h5>Key Coursework:</h5>
-                            <ul class="coursework-list">
-                                <li>Agronomy and Crop Production</li>
-                                <li>Plant Pathology and Entomology</li>
-                                <li>Soil Science and Fertility Management</li>
-                                <li>Horticulture and Landscaping</li>
-                                <li>Agricultural Economics and Statistics</li>
-                                <li>Climate Change and Agriculture</li>
-                                <li>Research Methodology and Experimental Design</li>
-                            </ul>
+  <!-- Skills Section -->
+  <section id="skills" class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <h2>Skills & Expertise</h2>
+        <div class="section-divider"></div>
+      </div>
 
-                            <h5 class="thesis-heading">Thesis Research:</h5>
-                            <div class="thesis-box">
-                                <p class="thesis-title"><strong>Growth, Productivity and Profitability of Different
-                                        Cultivars of Potato (Solanum tuberosum L.) with and without Straw-Mulch in
-                                        Dadeldhura, Nepal</strong></p>
-                                <p class="thesis-description">Comprehensive field research examining the impact of straw
-                                    mulching on potato cultivar performance, focusing on growth parameters, yield
-                                    optimization, and economic viability in the Dadeldhura region.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="skills-grid">
+        <!-- Technical Skills -->
+        <div class="card card-skills">
+          <div class="card-header card-header-primary">
+            <div class="skills-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="6"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+              <h3>Technical Skills</h3>
             </div>
+          </div>
+          <div class="card-body">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Geographic Information Systems (GIS)</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>SPSS (Statistical Analysis)</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>R-Studio (Data Analysis)</span>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: 88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>DSSAT (Crop Modeling)</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Microsoft Office Suite</span>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: 95%"></div></div>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Research & Publications Section -->
-    <section id="research" class="research-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Research & Publications</h2>
-                <div class="section-divider"></div>
+        <!-- Research & Analysis -->
+        <div class="card card-skills">
+          <div class="card-header card-header-primary">
+            <div class="skills-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+              <h3>Research & Analysis</h3>
             </div>
-            <div class="research-grid">
-                <div class="research-card">
-                    <div class="research-type">Research Article</div>
-                    <h3 class="research-title">Growth, Productivity and Profitability of Different Cultivars of Potato
-                        (Solanum tuberosum L.) with and without Straw-Mulch in Dadeldhura, Nepal</h3>
-                    <p class="research-authors">Muna Thapa, Lal Prasad Amgain, Manisha Chaudhary</p>
-                    <p class="research-journal">Archives of Agriculture and Environmental Science</p>
-                    <p class="research-doi">Journal: Nepalese Horticulture</p>
-                    <p class="research-description">This study evaluates the impact of straw mulching on growth
-                        parameters, yield, and economic returns of four potato cultivars in far-western Nepal.</p>
-                    <a href="https://doi.org/10.3126/nh.v19i1.86415" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-secondary">View Publication</a>
-                </div>
-
-                <div class="research-card">
-                    <div class="research-type">Abstract Paper</div>
-                    <h3 class="research-title">Evaluation Of Major Agro-Meteorological Indices of Rapeseed Grown With
-                        Climate Change Adaptation Measures Under Western Terai Agroecology of Nepal</h3>
-                    <p class="research-authors">Muna Thapa, Pramod Pokhrel, Lal Prasad Amgain</p>
-                    <p class="research-doi">Journal: World Congress on “Climate Change and Its Effects (CCIE-2025)” –
-                        Souvenir / Proceedings</p>
-                    <p class="research-description">Comprehensive field study examining climate-resilient agricultural
-                        practices and their adoption by smallholder farmers in the Dadeldhura district.</p>
-                    <a href="https://agetds.com/ijaas/wp-content/uploads/sites/2/2025/09/Final-Souvenir-proceeding-cum-absatrct-book-CCIE-2025.pdf#page=377"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View Publication</a>
-                </div>
+          </div>
+          <div class="card-body">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Research Methodology</span>
+                <span class="skill-percent">92%</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: 92%"></div></div>
             </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Experimental Design</span>
+                <span class="skill-percent">87%</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: 87%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Data Collection & Management</span>
+                <span class="skill-percent">93%</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: 93%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Statistical Analysis</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Work Experience Section -->
-    <section id="experience" class="experience-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Work Experience</h2>
-                <div class="section-divider"></div>
+        <!-- Agricultural Field Skills -->
+        <div class="card card-skills">
+          <div class="card-header card-header-primary">
+            <div class="skills-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <h3>Agricultural Field Skills</h3>
             </div>
-            <div class="timeline experience-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Oct 2025 - Present</div>
-                        <h3 class="timeline-title">Research Assistant</h3>
-                        <h4 class="timeline-institution">Nepal Development Research Institute (NDRI), Lalitpur, Nepal
-                        </h4>
-                        <ul class="experience-responsibilities">
-                            <li>Conducted comprehensive literature reviews on Nepal's large cardamom sector, analyzing
-                                production systems, market demand, export patterns, and price mechanisms to generate
-                                evidence-based insights for project reporting</li>
-                            <li>Provided research and administrative support across the Livelihoods and Food Security
-                                thematic area, contributing to ongoing projects, team meetings, and collaborative
-                                activities under the supervision of project and thematic leads</li>
-                            <li>Supported in overall research, assisted in field surveys, data cleaning, transcribing
-                                and translation of qualitative data and documentation in Safe Migration and Integration
-                                of Food Safety and Nutrition in Nepal</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">July 2024 - Sept 2025</div>
-                        <h3 class="timeline-title">Farm Manager</h3>
-                        <h4 class="timeline-institution">Dynamic Mountain Organic Agro Company Pvt. Ltd</h4>
-                        <ul class="experience-responsibilities">
-                            <li>Developing sustainable business strategies and expanding market linkages for herbs,
-                                vegetables, and spices, with attention to environmentally responsible practices.
-                            </li>
-                            <li>Providing technical guidance and consultancy on crop production, plant health
-                                management, and the import-export value chain of agricultural products.</li>
-                            <li>Supervising and coordinating daily operational activities, ensuring effective
-                                integration of sustainable cultivation practices.</li>
-                            <li>Coordinating with local farmers, cooperatives, and stakeholders to implement plant
-                                health interventions and environmentally friendly cropping systems.</li>
-                            <li>Monitoring and supervising cultivation practices to enhance plant health, productivity,
-                                and quality, while applying scientific and evidence-based approaches.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jan 2023 - July 2023</div>
-                        <h3 class="timeline-title">Agriculture Intern</h3>
-                        <h4 class="timeline-institution">Prime Minister Agriculture Modernization Project,
-                            PIU-DADELDHURA</h4>
-                        <ul class="experience-responsibilities">
-                            <li>Participated in the identification and management of Citrus Greening Disease (HLB) in
-                                Sweet Orange Orchards</li>
-                            <li>Sample preparation for PCR test for Citrus Greening Disease</li>
-                            <li>Training on the Application of Plastic Mulching for Potato and Soybean Cultivation
-                                Provided to farmers</li>
-                            <li>Investigation of Potato Powdery Scab Management in Infected Soil Using Diverse
-                                Biological and Chemical Treatments</li>
-                            <li>Varietal evaluation, morphological characterization and preference analysis of potato
-                                genotype</li>
-                            <li>Investigation on effect of Seed Tuber Size on Growth and Yield of Potato (Solanum
-                                Tuberosum L.) Variety Desiree</li>
-                            <li>Investigation on effect of different organic manure in growth and yield of potato
-                                (Desiree)</li>
-                            <li>Attended Training on Integrated Pest Management Practices for Potato</li>
-                        </ul>
-                    </div>
-                </div>
+          </div>
+          <div class="card-body">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Crop Production & Management</span>
+                <span class="skill-percent">94%</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: 94%"></div></div>
             </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Soil Testing & Analysis</span>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: 88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Pest & Disease Management</span>
+                <span class="skill-percent">86%</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: 86%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Sustainable Farming Practices</span>
+                <span class="skill-percent">91%</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: 91%"></div></div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Skills & Expertise</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="skills-categories">
-                <div class="skill-category">
-                    <h3 class="category-title">Technical Skills</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Geographic Information Systems (GIS)</span>
-                            <span class="skill-percentage">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">SPSS (Statistical Analysis)</span>
-                            <span class="skill-percentage">90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">R-Studio (Data Analysis)</span>
-                            <span class="skill-percentage">88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="88"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">DSSAT (Crop Modeling)</span>
-                            <span class="skill-percentage">80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="80"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Microsoft Office Suite</span>
-                            <span class="skill-percentage">95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="95"></div>
-                        </div>
-                    </div>
-                </div>
+  <!-- Certifications Section -->
+  <section id="certifications" class="section section-gradient">
+    <div class="container">
+      <div class="section-header">
+        <h2>Certifications & Training</h2>
+        <div class="section-divider"></div>
+      </div>
 
-                <div class="skill-category">
-                    <h3 class="category-title">Research & Analysis</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Research Methodology</span>
-                            <span class="skill-percentage">92%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="92"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Experimental Design</span>
-                            <span class="skill-percentage">87%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="87"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Data Collection & Management</span>
-                            <span class="skill-percentage">93%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="93"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Statistical Analysis</span>
-                            <span class="skill-percentage">90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="90"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="category-title">Agricultural Field Skills</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Crop Production & Management</span>
-                            <span class="skill-percentage">94%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="94"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Soil Testing & Analysis</span>
-                            <span class="skill-percentage">88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="88"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Pest & Disease Management</span>
-                            <span class="skill-percentage">86%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="86"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Sustainable Farming Practices</span>
-                            <span class="skill-percentage">91%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="91"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="certifications-grid">
+        <div class="card card-cert">
+          <div class="cert-image">
+            <img src="assets/certificates/ypard_project_proposal_certificate.jpg" alt="Project Proposal Development">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-amber">2020</span>
+            <h3>Project Proposal Development and Management</h3>
+            <p class="cert-issuer">Young Professionals for Agricultural Development(YPARD),Nepal</p>
+            <p class="cert-description">Completed a 5-day online workshop which gained me practical skills in project concept development, proposal writing, logical framework analysis, budgeting, implementation planning, and project management.</p>
+          </div>
         </div>
-    </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Certifications & Training</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="certifications-grid">
-                <div class="cert-card">
-                    <div class="cert-image-wrapper">
-                        <img src="assets/certificates/ypard_project_proposal_certificate.jpg"
-                            alt="Project Proposal Development and Management Certificate" class="cert-image">
-                    </div>
-                    <h3 class="cert-title">Project Proposal Development and Management</h3>
-                    <p class="cert-issuer">Young Professionals for Agricultural Development(YPARD),Nepal</p>
-                    <p class="cert-year">2020</p>
-                    <p class="cert-description">Completed a 5-day online workshop which gained me practical skills in
-                        project concept
-                        development, proposal writing, logical framework analysis, budgeting, implementation planning,
-                        and project management.
-                    </p>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-image-wrapper">
-                        <img src="assets/certificates/care_rstudio_certificate.jpg"
-                            alt="Statistical Computation and Data Analysis Using R-Studio" class="cert-image">
-                    </div>
-                    <h3 class="cert-title">Statistical Computation and Data Analysis Using R-Studio</h3>
-                    <p class="cert-issuer">CARE, Kathmandu</p>
-                    <p class="cert-year">2023</p>
-                    <p class="cert-description">Completed an intensive training on statistical computation and data
-                        analysis using R and R-Studio, with hands-on experience in data analysis, statistical modeling,
-                        and data visualization for data-driven decision making.</p>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-image-wrapper">
-                        <img src="assets/certificates/eyosa_gis_Certificate.jpg"
-                            alt="Application of GIS & Remote Sensing in Agriculture Certificate" class="cert-image">
-                    </div>
-                    <h3 class="cert-title">Application of GIS & Remote Sensing in Agriculture</h3>
-                    <p class="cert-issuer">SEED Innovations / EYOSA</p>
-                    <p class="cert-year">2020</p>
-                    <p class="cert-description">Completed a 3-day training program (May 14–16) focused on the practical
-                        applications of Geographic Information Systems (GIS) and Remote Sensing techniques to enhance
-                        agricultural productivity and spatial data monitoring.</p>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-image-wrapper">
-                        <img src="assets/certificates/ypard_basic_excel_and_gis_certificate.jpg"
-                            alt="Basic Excel and ArcGIS (GIS) for Data Management and Spatial Analysis Certificate"
-                            class="cert-image">
-                    </div>
-                    <h3 class="cert-title">Basic Excel and ArcGIS (GIS) for Data Management and Spatial Analysis</h3>
-                    <p class="cert-issuer">Young Professionals for Agricultural Development(YPARD),Nepal</p>
-                    <p class="cert-year">2021</p>
-                    <p class="cert-description">Completed web-based training on Basic Excel and ArcGIS, gaining
-                        foundational skills in data management and spatial
-                        analysis.
-                    </p>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-image-wrapper">
-                        <img src="assets/certificates/forest_env_conservation_certificate.jpg"
-                            alt="Environment and Biodiversity Conservation Leadership ForestAction Nepal Certificate"
-                            class="cert-image">
-                    </div>
-                    <h3 class="cert-title">Environment and Biodiversity Conservation Leadership ForestAction Nepal</h3>
-                    <p class="cert-issuer">ForestAction Nepal</p>
-                    <p class="cert-year">2021</p>
-                    <p class="cert-description">Completed a 7-day intensive training on environment and
-                        biodiversity conservation leadership, focusing on developing leadership skills for sustainable
-                        environmental management and community-led conservation efforts.</p>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-image-wrapper">
-                        <img src="assets/certificates/fao_dssat_certificate.jpg"
-                            alt="The Decision Support System for Agrotechnology Transfer (DSSAT) Certificate"
-                            class="cert-image">
-                    </div>
-                    <h3 class="cert-title">The Decision Support System for Agrotechnology Transfer (DSSAT)</h3>
-                    <p class="cert-issuer">Food and Agriculture Organization(FAO) and Tribhuvan University</p>
-                    <p class="cert-year">2025</p>
-                    <p class="cert-description">Completed a 3-day technical training on the DSSAT software (August
-                        21–23), focusing on crop simulation modeling, data management, and decision-support tools for
-                        optimizing agrotechnology transfer and agricultural productivity.</p>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-image-wrapper">
-                        <img src="assets/certificates/china_certificate.jpg"
-                            alt="Training Course on Green Grain Storage Technologies for Developing Countries Certificate"
-                            class="cert-image">
-                    </div>
-
-                    <h3 class="cert-title">Green Grain Storage Technologies for Developing Countries</h3>
-                    <p class="cert-issuer">Ministry of Commerce of the People's Republic of China & Henan University of
-                        Technology</p>
-                    <p class="cert-year">2025</p>
-                    <p class="cert-description">Completed a 21-day international training program (July 8–28) in
-                        Zhengzhou, China, focused on advanced green grain storage technologies, sustainable post-harvest
-                        management, and agricultural modernization for developing nations.</p>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-image-wrapper">
-                        <img src="assets/certificates/fao_rural_certificate.jpg"
-                            alt="Participatory Rural Appraisal (PRA) & Research Methodology Certificate"
-                            class="cert-image">
-                    </div>
-                    <h3 class="cert-title">Participatory Rural Appraisal (PRA) & Research Methodology</h3>
-                    <p class="cert-issuer">Faculty of Agriculture, Far Western University, Tikapur, Nepal</p>
-                    <p class="cert-year">2022</p>
-                    <p class="cert-description">Completed a 6-day intensive training (April 17–22) focused on
-                        Participatory Rural Appraisal (PRA) techniques and foundational research methodologies for
-                        agricultural development and community engagement.</p>
-                </div>
-            </div>
+        <div class="card card-cert">
+          <div class="cert-image">
+            <img src="assets/certificates/care_rstudio_certificate.jpg" alt="R-Studio Training">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-amber">2023</span>
+            <h3>Statistical Computation and Data Analysis Using R-Studio</h3>
+            <p class="cert-issuer">CARE, Kathmandu</p>
+            <p class="cert-description">Completed an intensive training on statistical computation and data analysis using R and R-Studio, with hands-on experience in data analysis, statistical modeling, and data visualization for data-driven decision making.</p>
+          </div>
         </div>
-    </section>
 
-    <!-- Conferences Section -->
-    <section id="conferences" class="conferences-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Conferences & Seminars</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="conferences-list">
-                <div class="conference-card">
-                    <div class="conference-type oral">Oral Presentation</div>
-                    <h3 class="conference-title">World Congress on "Climate Change and Its Effects" (CCIE-2025)</h3>
-                    <div class="conference-meta">
-                        <span class="conference-location">Kathmandu, Nepal</span>
-                        <span class="conference-date">06/09/2025 - 08/09/2025</span>
-                    </div>
-                    <p class="conference-description">Oral Presentation of "Evaluation of Major Agro Meteorological
-                        Indices of Rapeseed Grown with Climate Change Adaptation Measures under Western Terai
-                        Agroecology of Nepal"</p>
-                </div>
-
-                <div class="conference-card">
-                    <div class="conference-type participation">Participation</div>
-                    <h3 class="conference-title">The Third APEC Seminar on Best Practices and Applications of
-                        Digitalization and Innovation in Food Supply Chain</h3>
-                    <div class="conference-meta">
-                        <span class="conference-location">Hefei, China</span>
-                        <span class="conference-date">21/07/2025 - 23/07/2025</span>
-                    </div>
-                    <p class="conference-description">Organized by the Academy of National Food and Strategic Reserves
-                        Administration where the seminar focused on digital technologies and innovative approaches to
-                        enhance efficiency, transparency, traceability, and sustainability in food supply chains, with
-                        emphasis on food security and resilient agri-food systems.</p>
-                </div>
-
-                <div class="conference-card">
-                    <div class="conference-type oral">Virtual Oral Presentation</div>
-                    <h3 class="conference-title">NAPA 4th Scientific Conference 2024</h3>
-                    <div class="conference-meta">
-                        <span class="conference-location">Baltimore, Maryland, USA</span>
-                        <span class="conference-date">24/05/2024 - 26/05/2024</span>
-                    </div>
-                    <p class="conference-description">Virtually oral presentation of "Evaluation of Major Agro
-                        Meteorological Indices of Rapeseed Grown with Climate Change Adaptation Measures under Western
-                        Terai Agroecology of Nepal"</p>
-                </div>
-            </div>
+        <div class="card card-cert">
+          <div class="cert-image">
+            <img src="assets/certificates/eyosa_gis_Certificate.jpg" alt="GIS Training">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-amber">2020</span>
+            <h3>Application of GIS & Remote Sensing in Agriculture</h3>
+            <p class="cert-issuer">SEED Innovations / EYOSA</p>
+            <p class="cert-description">Completed a 3-day training program (May 14â€“16) focused on the practical applications of Geographic Information Systems (GIS) and Remote Sensing techniques to enhance agricultural productivity and spatial data monitoring.</p>
+          </div>
         </div>
-    </section>
 
-    <!-- Honors & Awards Section -->
-    <section id="honors" class="honors-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Honors & Awards</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="awards-grid">
-                <div class="award-card">
-                    <div class="award-badge">1</div>
-                    <h3 class="award-title">Full Merit-Based Scholarship</h3>
-                    <p class="award-organization">Far Western University</p>
-                    <p class="award-year">2019</p>
-                    <p class="award-description">Covering 100% of tuition fees (awarded to the top-ranked student in the
-                        university entrance examination).</p>
-                </div>
-
-                <div class="award-card">
-                    <div class="award-badge">2</div>
-                    <h3 class="award-title">Research Mini-Grant (RMG)</h3>
-                    <p class="award-organization">Association of Nepalese Agricultural Professionals of Americas (NAPA)
-                    </p>
-                    <p class="award-year">2022</p>
-                    <p class="award-description">Evaluation of major agrometeorological indices of rapeseed grown with
-                        climate change adaptation measures under Western Terai agroecology of Nepal</p>
-                </div>
-
-                <div class="award-card">
-                    <div class="award-badge">3</div>
-                    <h3 class="award-title">Winner</h3>
-                    <p class="award-organization">Young Professionals for Agricultural Development (YPARD), Nepal</p>
-                    <p class="award-year">2019</p>
-                    <p class="award-description">Nation-wide online blog competition on the topic "Way Forward for
-                        Nepalese Agriculture: Innovation, Entrepreneurship and Sustainability"</p>
-                </div>
-            </div>
+        <div class="card card-cert">
+          <div class="cert-image">
+            <img src="assets/certificates/ypard_basic_excel_and_gis_certificate.jpg" alt="Excel and GIS Training">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-amber">2021</span>
+            <h3>Basic Excel and ArcGIS (GIS) for Data Management and Spatial Analysis</h3>
+            <p class="cert-issuer">Young Professionals for Agricultural Development(YPARD),Nepal</p>
+            <p class="cert-description">Completed web-based training on Basic Excel and ArcGIS, gaining foundational skills in data management and spatial analysis.</p>
+          </div>
         </div>
-    </section>
 
-    <!-- Volunteering & Leadership Section -->
-    <section id="volunteering" class="volunteering-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Volunteering & Leadership</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="leadership-grid">
-                <div class="leadership-card">
-                    <div class="leadership-image-wrapper">
-                        <img src="assets/certificates/honor_iaas_nepal.jpg" alt="IAAS Nepal Local Director Certificate"
-                            class="leadership-image">
-                    </div>
-                    <h3 class="leadership-title">Local Director</h3>
-                    <h4 class="leadership-org">International Association of Students in Agricultural and Related
-                        Sciences (IAAS) Nepal - Local Committee at the Faculty of Agriculture, Tikapur (Far Western
-                        University)</h4>
-                    <p class="leadership-period">2021 - 2022</p>
-                    <p class="leadership-location">Tikapur, Nepal</p>
-                    <p class="leadership-description">Successfully completed tenure as Executive Board Member of the
-                        International Association of Students in Agricultural and Related Sciences (IAAS) Nepal.
-                        Contributed to student-led initiatives promoting agriculture, youth leadership, sustainable
-                        development, and global exchange in agricultural sciences.</p>
-                </div>
-
-                <div class="leadership-card">
-                    <div class="leadership-image-wrapper">
-                        <img src="assets/certificates/honor_hult_prize.png" alt="Hult Prize Campus Director Certificate"
-                            class="leadership-image">
-                    </div>
-                    <h3 class="leadership-title">Campus Director</h3>
-                    <h4 class="leadership-org">Hult Prize On Campus Program</h4>
-                    <p class="leadership-period">2021 - 2022</p>
-                    <p class="leadership-location">Sudurpashchim Province, Nepal</p>
-                    <p class="leadership-description">Successfully completed the Hult Prize On Campus Program as a
-                        Campus Director, a global social entrepreneurship competition and accelerator that challenges
-                        university students to develop innovative business ideas addressing pressing social issues
-                        (aligned with UN Sustainable Development Goals). Demonstrated skills in ideation, team
-                        collaboration, impact-driven problem-solving, and pitching sustainable ventures.</p>
-                </div>
-            </div>
+        <div class="card card-cert">
+          <div class="cert-image">
+            <img src="assets/certificates/forest_env_conservation_certificate.jpg" alt="Environment Conservation">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-amber">2021</span>
+            <h3>Environment and Biodiversity Conservation Leadership ForestAction Nepal</h3>
+            <p class="cert-issuer">ForestAction Nepal</p>
+            <p class="cert-description">Completed a 7-day intensive training on environment and biodiversity conservation leadership, focusing on developing leadership skills for sustainable environmental management and community-led conservation efforts.</p>
+          </div>
         </div>
-    </section>
 
+        <div class="card card-cert">
+          <div class="cert-image">
+            <img src="assets/certificates/fao_dssat_certificate.jpg" alt="DSSAT Training">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-amber">2025</span>
+            <h3>The Decision Support System for Agrotechnology Transfer (DSSAT)</h3>
+            <p class="cert-issuer">Food and Agriculture Organization(FAO) and Tribhuvan University</p>
+            <p class="cert-description">Completed a 3-day technical training on the DSSAT software (August 21â€“23), focusing on crop simulation modeling, data management, and decision-support tools for optimizing agrotechnology transfer and agricultural productivity.</p>
+          </div>
+        </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section section">
-        <div class="contact-bg-pattern"></div>
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Interested in collaboration, research opportunities, or
-                    agricultural
-                    consultation? Let's connect!</p>
+        <div class="card card-cert">
+          <div class="cert-image">
+            <img src="assets/certificates/china_certificate.jpg" alt="Green Grain Storage">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-amber">2025</span>
+            <h3>Green Grain Storage Technologies for Developing Countries</h3>
+            <p class="cert-issuer">Ministry of Commerce of the People's Republic of China & Henan University of Technology</p>
+            <p class="cert-description">Completed a 21-day international training program (July 8â€“28) in Zhengzhou, China, focused on advanced green grain storage technologies, sustainable post-harvest management, and agricultural modernization for developing nations.</p>
+          </div>
+        </div>
+
+        <div class="card card-cert">
+          <div class="cert-image">
+            <img src="assets/certificates/fao_rural_certificate.jpg" alt="PRA Training">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-amber">2022</span>
+            <h3>Participatory Rural Appraisal (PRA) & Research Methodology</h3>
+            <p class="cert-issuer">Faculty of Agriculture, Far Western University, Tikapur, Nepal</p>
+            <p class="cert-description">Completed a 6-day intensive training (April 17â€“22) focused on Participatory Rural Appraisal (PRA) techniques and foundational research methodologies for agricultural development and community engagement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conferences Section -->
+  <section id="conferences" class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <h2>Conferences & Seminars</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="conferences-list">
+        <div class="card card-conference border-emerald">
+          <div class="card-body">
+            <div class="conference-header">
+              <span class="badge badge-emerald">Oral Presentation</span>
+              <div class="conference-meta">
+                <span class="conference-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Kathmandu, Nepal
+                </span>
+                <span>â€¢</span>
+                <span>06/09/2025 - 08/09/2025</span>
+              </div>
             </div>
-            <div class="contact-content">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required placeholder="What is this regarding?">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" required
-                            placeholder="Write your message here..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
-                </form>
-                <div class="contact-info">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                            </svg>
-                        </div>
-                        <div class="info-content">
-                            <h4>Email</h4>
-                            <p>munamgr13@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                            </svg>
-                        </div>
-                        <div class="info-content">
-                            <h4>Location</h4>
-                            <p>Butwal, Nepal</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/muna-thapa-6a7420247/" class="social-link"
-                            aria-label="LinkedIn">LinkedIn</a>
-                        <a href="https://www.researchgate.net/scientific-contributions/Muna-Thapa-2333686901"
-                            class="social-link" aria-label="ResearchGate">ResearchGate</a>
-                        <a href="https://orcid.org/0009-0005-8154-4054" class="social-link"
-                            aria-label="ResearchGate">Orcid</a>
-                    </div>
+            <h3>World Congress on "Climate Change and Its Effects" (CCIE-2025)</h3>
+            <p>Oral Presentation of "Evaluation of Major Agro Meteorological Indices of Rapeseed Grown with Climate Change Adaptation Measures under Western Terai Agroecology of Nepal"</p>
+          </div>
+        </div>
+
+        <div class="card card-conference border-amber">
+          <div class="card-body">
+            <div class="conference-header">
+              <span class="badge badge-amber">Participation</span>
+              <div class="conference-meta">
+                <span class="conference-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Hefei, China
+                </span>
+                <span>â€¢</span>
+                <span>21/07/2025 - 23/07/2025</span>
+              </div>
+            </div>
+            <h3>The Third APEC Seminar on Best Practices and Applications of Digitalization and Innovation in Food Supply Chain</h3>
+            <p>Organized by the Academy of National Food and Strategic Reserves Administration where the seminar focused on digital technologies and innovative approaches to enhance efficiency, transparency, traceability, and sustainability in food supply chains, with emphasis on food security and resilient agri-food systems.</p>
+          </div>
+        </div>
+
+        <div class="card card-conference border-emerald">
+          <div class="card-body">
+            <div class="conference-header">
+              <span class="badge badge-emerald">Virtual Oral Presentation</span>
+              <div class="conference-meta">
+                <span class="conference-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Baltimore, Maryland, USA
+                </span>
+                <span>â€¢</span>
+                <span>24/05/2024 - 26/05/2024</span>
+              </div>
+            </div>
+            <h3>NAPA 4th Scientific Conference 2024</h3>
+            <p>Virtually oral presentation of "Evaluation of Major Agro Meteorological Indices of Rapeseed Grown with Climate Change Adaptation Measures under Western Terai Agroecology of Nepal"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Honors Section -->
+  <section id="honors" class="section section-gradient">
+    <div class="container">
+      <div class="section-header">
+        <h2>Honors & Awards</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="honors-grid">
+        <div class="card card-honor">
+          <div class="honor-gradient"></div>
+          <div class="card-body honor-body">
+            <div class="honor-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"/>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+              </svg>
+            </div>
+            <span class="badge badge-amber">2019</span>
+            <h3>Full Merit-Based Scholarship</h3>
+            <p class="honor-org">Far Western University</p>
+            <p class="honor-description">Covering 100% of tuition fees (awarded to the top-ranked student in the university entrance examination).</p>
+          </div>
+        </div>
+
+        <div class="card card-honor">
+          <div class="honor-gradient"></div>
+          <div class="card-body honor-body">
+            <div class="honor-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"/>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+              </svg>
+            </div>
+            <span class="badge badge-amber">2022</span>
+            <h3>Research Mini-Grant (RMG)</h3>
+            <p class="honor-org">Association of Nepalese Agricultural Professionals of Americas (NAPA)</p>
+            <p class="honor-description">Evaluation of major agrometeorological indices of rapeseed grown with climate change adaptation measures under Western Terai agroecology of Nepal</p>
+          </div>
+        </div>
+
+        <div class="card card-honor">
+          <div class="honor-gradient"></div>
+          <div class="card-body honor-body">
+            <div class="honor-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"/>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+              </svg>
+            </div>
+            <span class="badge badge-amber">2019</span>
+            <h3>Winner</h3>
+            <p class="honor-org">Young Professionals for Agricultural Development (YPARD), Nepal</p>
+            <p class="honor-description">Nation-wide online blog competition on the topic "Way Forward for Nepalese Agriculture: Innovation, Entrepreneurship and Sustainability"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Volunteering Section -->
+  <section id="volunteering" class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <h2>Volunteering & Leadership</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="volunteering-grid">
+        <div class="card card-volunteering">
+          <div class="volunteering-image">
+            <img src="assets/certificates/honor_iaas_nepal.jpg" alt="Local Director">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-emerald">2021 - 2022</span>
+            <h3>Local Director</h3>
+            <p class="volunteering-org">International Association of Students in Agricultural and Related Sciences (IAAS) Nepal - Local Committee at the Faculty of Agriculture, Tikapur (Far Western University)</p>
+            <p class="volunteering-location">Tikapur, Nepal</p>
+            <p class="volunteering-description">Successfully completed tenure as Executive Board Member of the International Association of Students in Agricultural and Related Sciences (IAAS) Nepal. Contributed to student-led initiatives promoting agriculture, youth leadership, sustainable development, and global exchange in agricultural sciences.</p>
+          </div>
+        </div>
+
+        <div class="card card-volunteering">
+          <div class="volunteering-image">
+            <img src="assets/certificates/honor_hult_prize.png" alt="Campus Director">
+          </div>
+          <div class="card-body">
+            <span class="badge badge-emerald">2021 - 2022</span>
+            <h3>Campus Director</h3>
+            <p class="volunteering-org">Hult Prize On Campus Program</p>
+            <p class="volunteering-location">Sudurpashchim Province, Nepal</p>
+            <p class="volunteering-description">Successfully completed the Hult Prize On Campus Program as a Campus Director, a global social entrepreneurship competition and accelerator that challenges university students to develop innovative business ideas addressing pressing social issues (aligned with UN Sustainable Development Goals). Demonstrated skills in ideation, team collaboration, impact-driven problem-solving, and pitching sustainable ventures.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section section-contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="text-white">Get In Touch</h2>
+        <div class="section-divider divider-light"></div>
+        <p class="contact-intro">
+          Interested in collaboration, research opportunities, or agricultural consultation? Let's connect!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card card-contact-form">
+          <div class="card-body">
+            <h3>Send a Message</h3>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required placeholder="What is this regarding?">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-white btn-full">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <div class="card card-contact-info">
+            <div class="card-body">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
                 </div>
+                <div>
+                  <h4>Email</h4>
+                  <p>munamgr13@gmail.com</p>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="card card-contact-info">
+            <div class="card-body">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Location</h4>
+                  <p>Butwal, Nepal</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-contact-info">
+            <div class="card-body">
+              <h4 class="connect-title">Connect With Me</h4>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/muna-thapa-6a7420247/" target="_blank" rel="noopener noreferrer" class="btn btn-social">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                  LinkedIn
+                </a>
+                <a href="https://www.researchgate.net/scientific-contributions/Muna-Thapa-2333686901" target="_blank" rel="noopener noreferrer" class="btn btn-social">
+                  ResearchGate
+                </a>
+                <a href="https://orcid.org/0009-0005-8154-4054" target="_blank" rel="noopener noreferrer" class="btn btn-social">
+                  Orcid
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="currentYear"></span> Muna Thapa. All rights reserved.</p>
-            <p class="footer-tagline">Cultivating Knowledge, Growing Sustainability</p>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Muna Thapa. All rights reserved.</p>
+      <p class="footer-tagline">Cultivating Knowledge, Growing Sustainability</p>
+    </div>
+  </footer>
 
-    <!-- GSAP Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-    <!-- Main JavaScript -->
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
