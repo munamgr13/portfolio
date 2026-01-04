@@ -13,6 +13,7 @@ const menuIcon = document.getElementById('menu-icon');
 const closeIcon = document.getElementById('close-icon');
 const contactForm = document.getElementById('contact-form');
 const toastContainer = document.getElementById('toast-container');
+const themeToggle = document.getElementById('theme-toggle');
 
 // Navigation items for active state tracking
 const sections = ['home', 'about', 'education', 'research', 'experience', 'skills', 'certifications', 'conferences', 'honors', 'volunteering', 'contact'];
@@ -24,12 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set current year in footer
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  // Initialize theme
+  initTheme();
+
   // Initialize scroll listener
   window.addEventListener('scroll', handleScroll);
 
   // Initialize mobile menu
   if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+  }
+
+  // Initialize theme toggle
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
   }
 
   // Initialize contact form
@@ -40,6 +49,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial scroll check
   handleScroll();
 });
+
+// ===================================
+// Theme Functions
+// ===================================
+function initTheme() {
+  // Check for saved theme preference or use system preference
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  } else if (systemPrefersDark) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+}
+
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+}
 
 // ===================================
 // Scroll Handler

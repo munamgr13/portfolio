@@ -78,6 +78,230 @@
   --transition-fast: 150ms ease;
   --transition-normal: 200ms ease;
   --transition-slow: 300ms ease;
+
+  /* Theme Variables - Light Mode (Default) */
+  --bg-body: linear-gradient(to bottom right, var(--emerald-50), var(--white), var(--amber-50));
+  --bg-white: var(--white);
+  --bg-gradient: linear-gradient(to bottom right, var(--emerald-50), var(--white));
+  --bg-card: var(--white);
+  --bg-card-hover: var(--white);
+  --border-card: var(--emerald-100);
+  --text-primary: var(--gray-900);
+  --text-secondary: var(--gray-700);
+  --text-muted: var(--gray-600);
+  --text-light: var(--gray-500);
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-border: var(--gray-200);
+  --input-bg: rgba(255, 255, 255, 0.2);
+  --input-border: rgba(255, 255, 255, 0.3);
+}
+
+/* Dark Mode Theme */
+[data-theme="dark"] {
+  --bg-body: linear-gradient(to bottom right, #0f1419, #1a2332, #0f1419);
+  --bg-white: #1a2332;
+  --bg-gradient: linear-gradient(to bottom right, #1a2332, #0f1419);
+  --bg-card: #1e293b;
+  --bg-card-hover: #243244;
+  --border-card: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+  --nav-bg: rgba(15, 20, 25, 0.95);
+  --nav-border: #334155;
+  --input-bg: rgba(0, 0, 0, 0.3);
+  --input-border: rgba(255, 255, 255, 0.1);
+
+  /* Override some base colors for dark mode */
+  --gray-50: #1e293b;
+  --gray-100: #334155;
+  --gray-200: #475569;
+  --emerald-50: #064e3b;
+  --emerald-100: #065f46;
+  --amber-50: #451a03;
+  --amber-100: #78350f;
+}
+
+/* ===================================
+   Dark Mode Component Overrides
+   =================================== */
+
+/* Thesis Card in Education */
+[data-theme="dark"] .thesis-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .thesis-title,
+[data-theme="dark"] .thesis-description {
+  color: #e2e8f0;
+}
+
+/* Research Cards */
+[data-theme="dark"] .research-title {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .research-meta p {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .research-meta strong {
+  color: #10b981;
+}
+
+[data-theme="dark"] .research-description {
+  color: #94a3b8;
+}
+
+/* Certification Cards */
+[data-theme="dark"] .card-cert h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .cert-issuer {
+  color: #34d399;
+}
+
+[data-theme="dark"] .cert-description {
+  color: #cbd5e1;
+}
+
+/* Conference Cards */
+[data-theme="dark"] .card-conference h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .card-conference p {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .conference-meta {
+  color: #94a3b8;
+}
+
+/* Honors Cards */
+[data-theme="dark"] .card-honor h3,
+[data-theme="dark"] .honor-body h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .honor-org {
+  color: #34d399;
+}
+
+[data-theme="dark"] .honor-description {
+  color: #cbd5e1;
+}
+
+/* Volunteering Cards */
+[data-theme="dark"] .card-volunteering h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .volunteering-org {
+  color: #34d399;
+}
+
+[data-theme="dark"] .volunteering-location {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .volunteering-description {
+  color: #cbd5e1;
+}
+
+/* Experience Cards */
+[data-theme="dark"] .card-experience .card-header-experience {
+  background: linear-gradient(to right, #1e293b, #0f1419);
+}
+
+[data-theme="dark"] .card-experience h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .card-experience .card-subtitle {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .responsibility-list li {
+  color: #cbd5e1;
+}
+
+/* Skills Cards */
+[data-theme="dark"] .skill-header span:first-child {
+  color: #e2e8f0;
+}
+
+/* Coursework items */
+[data-theme="dark"] .coursework h4,
+[data-theme="dark"] .thesis h4 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .coursework-item {
+  color: #cbd5e1;
+}
+
+/* About section */
+[data-theme="dark"] .about-text p {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .about-text strong {
+  color: #34d399;
+}
+
+/* Buttons in dark mode */
+[data-theme="dark"] .btn-outline {
+  border-color: #10b981;
+  color: #34d399;
+}
+
+[data-theme="dark"] .btn-outline:hover {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+/* Contact Section Intro */
+[data-theme="dark"] .contact-intro {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .section-header h2 {
+  color: #f1f5f9;
+}
+
+/* Active Nav Links in dark mode */
+[data-theme="dark"] .nav-link.active {
+  background: #065f46;
+  color: #34d399;
+}
+
+[data-theme="dark"] .nav-link:hover {
+  background: #064e3b;
+}
+
+[data-theme="dark"] .mobile-nav-link.active {
+  background: #065f46;
+  color: #34d399;
+}
+
+[data-theme="dark"] .mobile-nav-link:hover {
+  background: #064e3b;
+}
+
+/* Hamburger Menu Icon */
+[data-theme="dark"] .mobile-menu-btn {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .mobile-menu-btn:hover {
+  background: #334155;
+}
+
+[data-theme="dark"] .mobile-menu-btn svg {
+  stroke: #f1f5f9;
 }
 
 /* ===================================
@@ -100,9 +324,10 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   line-height: 1.6;
-  color: var(--gray-700);
-  background: linear-gradient(to bottom right, var(--emerald-50), var(--white), var(--amber-50));
+  color: var(--text-secondary);
+  background: var(--bg-body);
   min-height: 100vh;
+  transition: background var(--transition-slow), color var(--transition-slow);
 }
 
 img {
@@ -135,7 +360,7 @@ h4,
 h5,
 h6 {
   line-height: 1.3;
-  color: var(--gray-900);
+  color: var(--text-primary);
 }
 
 h1 {
@@ -200,7 +425,7 @@ strong {
 }
 
 .nav.scrolled {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow-lg);
 }
@@ -267,7 +492,7 @@ strong {
 .nav-link {
   padding: var(--spacing-2) var(--spacing-4);
   border-radius: var(--radius-lg);
-  color: var(--gray-700);
+  color: var(--text-secondary);
   font-weight: 500;
   transition: all var(--transition-normal);
 }
@@ -304,8 +529,8 @@ strong {
 }
 
 .mobile-nav {
-  background: var(--white);
-  border-top: 1px solid var(--gray-200);
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-card);
   box-shadow: var(--shadow-lg);
 }
 
@@ -327,7 +552,7 @@ strong {
   text-align: left;
   padding: var(--spacing-3) var(--spacing-4);
   border-radius: var(--radius-lg);
-  color: var(--gray-700);
+  color: var(--text-secondary);
   font-weight: 500;
   transition: all var(--transition-normal);
 }
@@ -550,11 +775,11 @@ strong {
 }
 
 .section-white {
-  background: var(--white);
+  background: var(--bg-white);
 }
 
 .section-gradient {
-  background: linear-gradient(to bottom right, var(--emerald-50), var(--white));
+  background: var(--bg-gradient);
 }
 
 .section-contact {
@@ -715,8 +940,8 @@ strong {
    Cards
    =================================== */
 .card {
-  background: var(--white);
-  border: 2px solid var(--emerald-100);
+  background: var(--bg-card);
+  border: 2px solid var(--border-card);
   border-radius: var(--radius-xl);
   overflow: hidden;
   transition: all var(--transition-slow);
@@ -1560,4 +1785,59 @@ strong {
   h3 {
     font-size: var(--font-size-lg);
   }
+}
+
+/* ===================================
+   Theme Toggle Button
+   =================================== */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  background: var(--emerald-100);
+  color: var(--emerald-700);
+  transition: all var(--transition-normal);
+  margin-left: var(--spacing-2);
+}
+
+.theme-toggle:hover {
+  background: var(--emerald-200);
+  transform: rotate(15deg);
+}
+
+.theme-toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  display: none;
+}
+
+/* Light mode: show moon icon (to switch to dark) */
+:root .theme-toggle .icon-moon,
+[data-theme="light"] .theme-toggle .icon-moon {
+  display: block;
+}
+
+/* Dark mode: show sun icon (to switch to light) */
+[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: #334155;
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background: #475569;
 }
